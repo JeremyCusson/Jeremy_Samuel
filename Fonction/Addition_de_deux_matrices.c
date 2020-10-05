@@ -80,7 +80,7 @@ int main(void)
 
 //Description: Addition de deux matrices paramétrées
 //Précondition: Le nombre de lignes et de colonnes sont identiques pour toutes les matrices
-//Postcondition: Le nombre de lignes et de colonnes de la matrice résultante sont différentes. Le résultats est 0 si les valeurs sont cinq chiffres en-dessous de la virgule
+//Postcondition: Le nombre de lignes et de colonnes de la matrice résultante sont différentes et le résultats est 0 si les valeurs sont cinq chiffres en-dessous de la virgule
 void AdditionMatrice(double matriceA[m][n], double matriceB[m][n], double matriceResultat[m][n])
 {
 	int nombreLigne = 0;
