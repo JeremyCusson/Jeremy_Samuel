@@ -84,7 +84,7 @@ int main(void)
 
 //Description: Multiplication de deux matrices paramétrées
 //Précondition: Matrice carré avec le même nombre de colonnes et de lignes
-//Postecondition: Matrice résultante possède le même nombre de colonnes et de lignes. Le résultats est 0 si les valeurs sont cinq chiffres en-dessous de la virgule
+//Postecondition: Matrice résultante possède le même nombre de colonnes et de lignes et le résultats est 0 si les valeurs sont cinq chiffres en-dessous de la virgule
 void MultiplicationMatrices(double matrice1[n][n], double matrice2[n][n], double matrice3[n][n])
 {
 	int nombreLigne = 0;
