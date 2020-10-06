@@ -15,22 +15,9 @@ const int NB_SERIE = 10;
 
 int main(void)
 {
-	void validation();
 	void planTest();
-	printf("Validation: \n");
-	validation();
 	printf("\n\nPlan de test: \n");
 	planTest();
-}
-
-void validation()
-{
-	const long double pi = 3.14159265358979323846264338327950288419716939937510582;
-	float cosRad(long double);
-	printf("cos(1), valeur attendu = 0.5403, valeur calcule = %f\n",cosRad(1));
-	printf("cos(0), valeur attendu = 1, valeur calcule = %f\n",cosRad(0));
-	printf("cos(pi/4), valeur attendu = 0.7071, valeur calcule = %f\n",cosRad(pi/4.0));
-	printf("cos(pi/2), valeur attendu = 0, valeur calcule = %f\n",cosRad(pi/2.0));
 }
 
 void planTest()
@@ -47,7 +34,7 @@ void planTest()
 //Post-Condition: si x < ou > 0 et 2 pi, x ramener entre 0 et 2 pi pour calcul.
 float cosRad(long double x)
 {
-	long double puissance(float base,float exposant);
+	long double puissance(float base,int exposant);
 	long long int factoriel(int n);
 	long double ramenerRadInterieurLimite(long double);
 	
@@ -117,12 +104,10 @@ long long int factoriel(int n)
 
 //Pre-condition: n/a
 //Post-Condition: si exposant negatif, devrait calculer 1/base exposant
-long double puissance(float base,float exposant)
+long double puissance(float base,int exposant)
 {
 	float tot=1;
-	float maxFor=0;
-	
-	maxFor += exposant;
+	int maxFor=exposant;
 	
 	if (exposant < 0)
 	{

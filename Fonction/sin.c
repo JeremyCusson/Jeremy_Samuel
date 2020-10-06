@@ -40,26 +40,34 @@ void planTest()
 	printf("sin(2*pi), valeur attendu = 0, valeur calcule = %f\n",sinRad(1*pi));
 	printf("sin(0), valeur attendu = 0, valeur calcule = %f\n",sinRad(0));
 	printf("sin(300.5*pi), valeur attendu = 1, valeur calcule = %f\n",sinRad(300.5*pi));
-	printf("sin(300*pi), valeur attendu = 0, valeur calcule = %f\n",sinRad(-300*pi));
+	printf("sin(-300*pi), valeur attendu = 0, valeur calcule = %f\n",sinRad(-300*pi));
 }
 
-//Pre-condition: x en radian, NB_SERIE ne devrait pas depasser 10 a 15 pour eviter le risque de perte de precision
-//Post-Condition: si x < ou > 0 et 2 pi, x ramener entre 0 et 2 pi pour calcul.
+//Pre-condition: x en radian, NB_SERIE ne devrait
+//	pas depasser 10 a 15 pour eviter le risque de 
+//	perte de precision
+//Post-Condition: si x < ou > 0 et 2 pi,
+//	x ramener entre 0 et 2 pi pour calcul.
 float sinRad(long double x)
 {
-	long double puissance(float,float);
+	long double puissance(float,int);
 	long long int factoriel(int);
 	long double ramenerRadInterieurLimite(long double);
 	x = ramenerRadInterieurLimite(x);
-	int expoFacto = 1; //Represente la valeur prise au exposant et a la factoriel pour le calcul du terme.
+
+	//Represente la valeur prise au exposant
+	// et a la factoriel pour le calcul du terme.
+	int expoFacto = 1; 
 	float total = 0;
 	
 	//Calcul du cos
 	for (int i=0;i<NB_SERIE;i++)
 	{
-		float terme = puissance(x,expoFacto)/factoriel(expoFacto); //On calcul le therme de la series 
+		//On calcul le therme de la series 
+		float terme = puissance(x,expoFacto)/factoriel(expoFacto); 
 		
-		//On alterne l'addition et la soustraction du terme en debutant avec une addition
+		//On alterne l'addition et la soustraction 
+		//du terme en debutant avec une addition
 		if (i%2 == 0)
 		{
 			total += terme;
@@ -69,8 +77,7 @@ float sinRad(long double x)
 			total -= terme;
 		}
 		expoFacto += 2;
-	}
-	
+	}	
 	return total;
 }
 
@@ -116,11 +123,10 @@ long long int factoriel(int n)
 
 //Pre-condition: n/a
 //Post-Condition: si exposant negatif, devrait calculer 1/base exposant
-long double puissance(float base,float exposant)
+long double puissance(float base,int exposant)
 {
 	float tot=1;
-	float maxFor=0;
-	maxFor += exposant;
+	int maxFor= exposant;
 		
 	if (exposant < 0)
 	{
