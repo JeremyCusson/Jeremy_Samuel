@@ -26,12 +26,15 @@ void planTest()
 	float cosRad(long double);
 	printf("cos(2*pi), valeur attendu = 1, valeur calcule = %f\n",cosRad(2*pi));
 	printf("cos(0), valeur attendu = 1, valeur calcule = %f\n",cosRad(0));
-	printf("cos(301*pi), valeur attendu = 0, valeur calcule = %f\n",cosRad(300.5*pi));
-	printf("cos(300*pi), valeur attendu = 1, valeur calcule = %f\n",cosRad(-300*pi));
+	printf("cos(300.5*pi), valeur attendu = 0, valeur calcule = %f\n",cosRad(300.5*pi));
+	printf("cos(-300*pi), valeur attendu = 1, valeur calcule = %f\n",cosRad(-300*pi));
 }
 
-//Pre-condition: x en radian, NB_SERIE ne devrait pas depasser 10 a 15 pour eviter le risque de perte de precision
-//Post-Condition: si x < ou > 0 et 2 pi, x ramener entre 0 et 2 pi pour calcul.
+//Pre-condition: x en radian,
+//	NB_SERIE ne devrait pas depasser 
+//	10 a 15 pour eviter le risque de perte de precision
+//Post-Condition: si x < ou > 0 et 2 pi, x ramener 
+//	entre 0 et 2 pi pour calcul.
 float cosRad(long double x)
 {
 	long double puissance(float base,int exposant);
@@ -40,15 +43,19 @@ float cosRad(long double x)
 	
 	x = ramenerRadInterieurLimite(x);
 	
-	int expoFacto = 0; //Represente la valeur prise au exposant et a la factoriel pour le calcul du terme.
+	//Represente la valeur prise au exposant 
+	//et a la factoriel pour le calcul du terme.
+	int expoFacto = 0; 
 	float total = 0;
 	
 	//Calcul du sin
 	for (int i=0;i<NB_SERIE;i++)
 	{
-		float terme = puissance(x,expoFacto)/factoriel(expoFacto); //On calcul le therme de la series 
+		//On calcul le therme de la series 
+		float terme = puissance(x,expoFacto)/factoriel(expoFacto); 
 		
-		//On alterne l'addition et la soustraction du terme en debutant avec une addition
+		//On alterne l'addition et la soustraction du terme 
+		//en debutant avec une addition
 		if (i%2 == 0)
 		{
 			total += terme;
@@ -102,7 +109,6 @@ long long int factoriel(int n)
 }
 
 
-//Pre-condition: n/a
 //Post-Condition: si exposant negatif, devrait calculer 1/base exposant
 long double puissance(float base,int exposant)
 {

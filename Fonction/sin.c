@@ -10,7 +10,7 @@ Description: Fonction permettant de calculer le sin d'un angle en radiant. Conti
 
 
 // Declaration constante
-const int NB_SERIE = 10;
+const int NB_SERIE = 5;
 
 
 int main(void)
@@ -19,8 +19,8 @@ int main(void)
 	void planTest();
 	printf("Validation: \n");
 	validation();
-	printf("\n\nPlan de test: \n");
-	planTest();
+	//printf("\n\nPlan de test: \n");
+	//planTest();
 }
 
 void validation()
@@ -37,7 +37,7 @@ void planTest()
 {
 	const long double pi = 3.14159265358979323846264338327950288419716939937510582;
 	float sinRad(long double);
-	printf("sin(2*pi), valeur attendu = 0, valeur calcule = %f\n",sinRad(1*pi));
+	printf("sin(2*pi), valeur attendu = 0, valeur calcule = %f\n",sinRad(2*pi));
 	printf("sin(0), valeur attendu = 0, valeur calcule = %f\n",sinRad(0));
 	printf("sin(300.5*pi), valeur attendu = 1, valeur calcule = %f\n",sinRad(300.5*pi));
 	printf("sin(-300*pi), valeur attendu = 0, valeur calcule = %f\n",sinRad(-300*pi));
@@ -121,7 +121,6 @@ long long int factoriel(int n)
 }
 
 
-//Pre-condition: n/a
 //Post-Condition: si exposant negatif, devrait calculer 1/base exposant
 long double puissance(float base,int exposant)
 {

@@ -15,8 +15,8 @@ int main(void)
 	void planTest();
 	printf("Validation: \n");
 	validation();
-	printf("\n\nPlan de test: \n");
-	planTest();
+//	printf("\n\nPlan de test: \n");
+//	planTest();
 }
 
 
@@ -32,7 +32,7 @@ void validation()
 void planTest()
 {
 	int indexCaractere(char str[],char c);
-	printf("Recherche : n dans [012345678910] index attendu : 0, index trouve: %d\n",indexCaractere("012345678910",'0'));
+	printf("Recherche : 0 dans [012345678910] index attendu : 0, index trouve: %d\n",indexCaractere("012345678910",'0'));
 	printf("Recherche : @ dans [] index attendu : -1, index trouve: %d\n",indexCaractere("",'@'));
 	printf("Recherche : _ dans [allo_comment_cava] index attendu : 4, index trouve: %d\n",indexCaractere("allo_comment_cava",'_'));
 	printf("Recherche : [espace] dans [allo comment cava] index attendu : 4, index trouve: %d\n",indexCaractere("allo comment cava",' '));
