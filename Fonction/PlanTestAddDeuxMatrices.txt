@@ -1,0 +1,5 @@
+-testValidation: ((1,2),(3,4),(5,6)) + ((6,5),(4,3),(2,1)) = ((7,7),(7,7),(7,7))
+-test1: Pour voir si le code est capable d'affiche des valeurs élevées, on met dans les deux matrices des valeurs élevées
+-test2: Pour voir si le code est capable d'effectuer des valeurs négatives élevées, on met dans les deux matrices 
+       des valeurs négatives élevées
+-test4: Si les matrices additionnées possèdent des valeurs six fois en dessous de la virgule, la matrice totale affiche des valeurs de 0
