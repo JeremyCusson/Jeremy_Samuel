@@ -74,26 +74,18 @@ int main(void)
 int DetectionPalindrome(char mot[])
 {
 	int nombreLettre = 0;
-	int count = 0;
+	
 	for(int i = 0; mot[i] != '\0'; i++)
 	{
 		nombreLettre++;
 	}
 	
-	char copieMot[nombreLettre];
-	
-	for(int j = nombreLettre-1; j >= 0; j--)
+	for (int j=0;j<nombreLettre;j++)
 	{
-		copieMot[count] = mot[j];
-		count++;
-	}
-	
-	copieMot[count] = '\0';
-	
-	for(int i = 0; mot[i] != '\0' || copieMot[i] != '\0'; i++)
-	{
-		if(mot[i] != copieMot[i])
-			return 0;
+		if (mot[j]!=mot[(nombreLettre - 1) - j])
+		{
+		   return 0;
+		}
 	}
 	
 	return 1;

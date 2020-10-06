@@ -1,0 +1,3 @@
+-test1:palaindrome chaine de caractère de grosseurs 9 retourne vrai
+-test2: chaine de caractère pas palindrome immense 100 résultat faux
+-test3:palaindrome chaine de caractère de grosseurs 100 retourne vrai

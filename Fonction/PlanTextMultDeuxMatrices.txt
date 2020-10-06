@@ -1,0 +1,7 @@
+Multiplication de deux matrices
+-test1: valeur de fous dans la matrice est-ce que le programme roule pareille, la valeur du produit devait être la même que la valeur
+       donner à la matrice3.-
+-test2: Valeur avec virgule 6 chiffres apès la virgule, la valeur du produit devait être la même que la valeur
+       donner à la matrice3. Devrait afficher 0,00000.-
+-test3: Si lettre plutôt que chiffre dans la matrice, le programme devrais mafficher des chiffres.
+-test4: Valeurs des matrices sont des négatifs élevés, matrice 
